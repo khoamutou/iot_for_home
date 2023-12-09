@@ -1,0 +1,24 @@
+{
+  "TT_IoT": {
+    "Camera": {
+      "StaTus": "OFF"
+    },
+    "Conditioner": {
+      "StaTus": "ON"
+    },
+    "Fan": {
+      "StaTus": "ON"
+    },
+    "TV": {
+      "StaTus": "ON"
+    },
+    "doam": 80,
+    "galv": 3400,
+    "nhietdo": 57
+  },
+  "data": {
+    "do am": 40,
+    "nhiet do": 24,
+    "value": 965
+  }
+}

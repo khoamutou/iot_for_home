@@ -1,0 +1,89 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.rowauto {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.header {
+  display: flex;
+  align-items: stretch;
+  /* flex-wrap: nowrap; */
+  height: 220px;
+  margin-bottom: 10px;
+
+  flex-direction: row;
+  border-radius: 10px;
+  color: whitesmoke;
+}
+
+.boxinheader {
+  text-align: center;
+  flex-grow: 8;
+  background-image: url(https://as1.ftcdn.net/v2/jpg/03/55/49/20/1000_F_355492076_Jqn6KV1wCnkmkAzBr5nl4ENgjZy3nEMx.jpg);
+  background-repeat: repeat;
+  background-size: contain;
+  border-radius: 10px;
+}
+
+.container {
+  /* background-color: red; */
+  margin: 0 200px;
+  /* height: 850px; */
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  border: 10px;
+  /* justify-content: space-between;  */
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.boxthietbi {
+  /* width: 1300px; */
+  /* background-color: whitesmoke; */
+  background-color: #e8e8e8;
+  /* border: 2px green solid; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.imagebox {
+  margin: 20px;
+  box-sizing: border-box;
+  image-resolution: 200px;
+}
+
+.thietbi {
+  background-color: #e8e8e8;
+  display: flex;
+  width: 300px;
+  flex-direction: column;
+  box-sizing: border-box;
+  border: 2px green solid;
+  border-radius: 5px;
+  justify-content: center;
+  background-color: #f2f2f2;
+}
+
+.boxchuaanh {
+  /* border: dashed;  */
+  text-align: center;
+  height: 250px;
+}
+
+.box_switch {
+  display: flex;
+  flex-direction: row;
+  height: 42px;
+  /* justify-content: space-between; */
+}

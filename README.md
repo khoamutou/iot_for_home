@@ -16,6 +16,7 @@ The PCB Circuit Design
 ![image](https://github.com/khoamutou/iot_for_home/assets/131346173/d40b0020-afb6-49bf-b84e-90c9228f61df)
 
 The Circuit on Bread Board
+
 ![image](https://github.com/khoamutou/iot_for_home/assets/131346173/3498cc0a-1ab2-4009-bbf8-4bb235fce788)
 
 

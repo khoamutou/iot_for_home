@@ -8,3 +8,4 @@ The project aims to design a kit to automate home appliances with following func
 + Design a website use HTML/CSS/Javascript to remotely control the system.
 + Locally control through button on kit or remotely control through the websites.
 + All local functions can remotely done through the website.
+![image](https://github.com/khoamutou/iot_for_home/assets/131346173/779a5e23-5d8c-490d-8058-4c56bc8e59fc)

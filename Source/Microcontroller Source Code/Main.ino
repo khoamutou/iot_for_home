@@ -14,14 +14,8 @@
 #define FIREBASE_HOST             "https://esp32-51b05-default-rtdb.firebaseio.com"
 #define FIREBASE_AUTH             "pFOw8cuDHnyYHrEtZt5BWQGbaWKzaLOW4k8IEkhP"
 
-// #define WIFI_SSID "Phong 7A"
-// #define WIFI_PASSWORD "phong7a4nguoi"
-
 #define WIFI_SSID "KIM PHUNG"
 #define WIFI_PASSWORD "68686868"
-
-// #define WIFI_SSID "Khoamutou"
-// #define WIFI_PASSWORD "Mechan11"
 
 FirebaseData fbdo;
 

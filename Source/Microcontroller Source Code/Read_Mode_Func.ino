@@ -1,9 +1,12 @@
-void RunChoiceMode() {
-  if (MODE == 1) {
+void RunChoiceMode()
+{
+  if (MODE == 1)
+  {
 
     BulbAuto(LIGHT_D, RELAY1);
-
-  } else if (MODE == 0) {
+  }
+  else if (MODE == 0)
+  {
     BulbManual();
     FanManual();
   }
@@ -11,22 +14,31 @@ void RunChoiceMode() {
 
 //
 
-void ReadMode() {
-  if (WiFi.status() != WL_CONNECTED) {
-
-  } else {
-    if (Firebase.getInt(fbdo, "/Do_An_1/AUTO_MODE/STATUS")) {
+void ReadMode()
+{
+  if (WiFi.status() != WL_CONNECTED)
+  {
+  }
+  else
+  {
+    if (Firebase.getInt(fbdo, "/Do_An_1/AUTO_MODE/STATUS"))
+    {
       int ModeFB = fbdo.intData();
-      //Serial.println("Download success: " + String(fbdb.stringData()));
-      if (ModeFB == 0) {
-        if (MODE == 1) {
+      // Serial.println("Download success: " + String(fbdb.stringData()));
+      if (ModeFB == 0)
+      {
+        if (MODE == 1)
+        {
           timerStop(My_timer);
           Serial.println("MUNUAL");
         }
         MODE = 0;
         digitalWrite(LED_MODE, LOW);
-      } else if (ModeFB == 1) {
-        if (MODE == LOW) {
+      }
+      else if (ModeFB == 1)
+      {
+        if (MODE == LOW)
+        {
           lastTimeUpdateFan = 0;
           timerRestart(My_timer);
           Serial.println("AUTO");
@@ -34,12 +46,14 @@ void ReadMode() {
         MODE = 1;
         digitalWrite(LED_MODE, HIGH);
       }
-    } else {
+    }
+    else
+    {
       Serial.println("Download fail: ");
     }
   }
 
-  //Kieu 1
+  // Kieu 1
 
   // int reading = digitalRead(Btn_MODE);
 
@@ -88,36 +102,45 @@ void ReadMode() {
   //   }
   // }
 
-  //Kieu khac
-  if (millis() - lastTimeBtnMode > TIME_BETWEEN_BNT) {
+  // Kieu khac
+  if (millis() - lastTimeBtnMode > TIME_BETWEEN_BNT)
+  {
     Btn_mode_state = digitalRead(Btn_MODE);
-    if (Btn_mode_state != last_Btn_mode_state) {
+    if (Btn_mode_state != last_Btn_mode_state)
+    {
       last_Btn_mode_state = Btn_mode_state;
       lastTimeBtnMode = millis();
-      if (Btn_mode_state == LOW) {
+      if (Btn_mode_state == LOW)
+      {
 
-        if (MODE == 1) {
+        if (MODE == 1)
+        {
 
           MODE = 0;
           digitalWrite(LED_MODE, LOW);
           timerStop(My_timer);
           Serial.println("AUTO MODE IS OFF");
 
-          if (WiFi.status() != WL_CONNECTED) {
-
-          } else {
+          if (WiFi.status() != WL_CONNECTED)
+          {
+          }
+          else
+          {
             if (Firebase.setInt(fbdo, "/Do_An_1/AUTO_MODE/STATUS", 0))
               Serial.println("Upload mode state success");
           }
-
-        } else if (MODE == 0) {
+        }
+        else if (MODE == 0)
+        {
           MODE = 1;
           digitalWrite(LED_MODE, HIGH);
           timerRestart(My_timer);
           Serial.println("AUTO MODE IS ON");
-          if (WiFi.status() != WL_CONNECTED) {
-
-          } else {
+          if (WiFi.status() != WL_CONNECTED)
+          {
+          }
+          else
+          {
             if (Firebase.setInt(fbdo, "/Do_An_1/AUTO_MODE/STATUS", 1))
               Serial.println("Upload mode state success");
           }
